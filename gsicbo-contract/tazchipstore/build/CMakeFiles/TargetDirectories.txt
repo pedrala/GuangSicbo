@@ -1,0 +1,3 @@
+/mnt/e/51_git/c004_gsicbo/contract/tazchipstore/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/51_git/c004_gsicbo/contract/tazchipstore/build/CMakeFiles/tazchipstore.wasm.dir
+/mnt/e/51_git/c004_gsicbo/contract/tazchipstore/build/CMakeFiles/edit_cache.dir

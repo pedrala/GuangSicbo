@@ -1,0 +1,1 @@
+/usr/bin/eosio-ld  CMakeFiles/taztokenstak.wasm.dir/taztokenstak.cpp.o -o taztokenstak.wasm 

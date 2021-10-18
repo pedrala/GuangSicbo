@@ -1,0 +1,3 @@
+/mnt/e/51_git/c004_gsicbo/contract/taztokenstak/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/51_git/c004_gsicbo/contract/taztokenstak/build/CMakeFiles/taztokenstak.wasm.dir
+/mnt/e/51_git/c004_gsicbo/contract/taztokenstak/build/CMakeFiles/edit_cache.dir

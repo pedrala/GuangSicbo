@@ -1,0 +1,3 @@
+/mnt/e/51_git/c004_gsicbo/contract/tazgamehouse/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/51_git/c004_gsicbo/contract/tazgamehouse/build/CMakeFiles/tazgamehouse.wasm.dir
+/mnt/e/51_git/c004_gsicbo/contract/tazgamehouse/build/CMakeFiles/edit_cache.dir

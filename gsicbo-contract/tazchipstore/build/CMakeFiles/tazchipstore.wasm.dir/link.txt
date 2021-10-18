@@ -1,0 +1,1 @@
+/usr/bin/eosio-ld  CMakeFiles/tazchipstore.wasm.dir/tazchipstore.cpp.o -o tazchipstore.wasm 

@@ -1,0 +1,713 @@
+@import '../flex.scss';
+@import './color.scss';
+@import "../fonts.scss";
+
+.border-bottom {
+  border-bottom: 4px solid $border-color;
+}
+
+.border-top {
+  border-top: 4px solid $border-color;
+}
+
+.border-right {
+  border-right: 4px solid $border-color;
+}
+
+@keyframes m-twinkle {
+  from {
+    box-shadow:
+      inset 0 0 3px #fff,
+      /* inner white */
+      inset 5px 0 5px rgb(253, 255, 116),
+      /* inner left short */
+      inset -5px 0 5px rgb(253, 255, 116),
+      /* inner right short */
+      0 0 5px #fff,
+      /* outer white */
+      -5px 0 5px rgb(253, 255, 116),
+      /* outer left */
+      5px 0 5px rgb(253, 255, 116),
+      /* outer right */
+      0 5px 5px rgb(253, 255, 116),
+      /* outer bottom */
+      0 -5px 5px rgb(253, 255, 116);
+    /* outer top */
+  }
+
+  to {
+    box-shadow:
+      inset 0 0 10px #fff,
+      /* inner white */
+      inset 5px 0 20px rgb(253, 255, 116),
+      /* inner left short */
+      inset -5px 0 20px rgb(253, 255, 116),
+      /* inner right short */
+      0 0 5px #fff,
+      /* outer white */
+      -5px 0 5px rgb(253, 255, 116),
+      /* outer left */
+      5px 0 5px rgb(253, 255, 116),
+      /* outer right */
+      0 5px 5px rgb(253, 255, 116),
+      /* outer bottom */
+      0 -5px 5px rgb(253, 255, 116);
+    /* outer top */
+  }
+}
+
+.m-twinkle {
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: m-twinkle;
+}
+
+.half {
+  width: 50%;
+}
+
+.dividend-rate {
+  @extend .text-small;
+  background: #3C271B;
+  color: #FFF389;
+  height: 24px;
+}
+
+.border-horizontal {
+  background: #F7E2C0;
+  width: 100%;
+  height: 4px;
+  margin: 0px;
+}
+
+.mobile-game-table {
+  display: block;
+}
+
+.m-row {
+  @extend .flex;
+  background-image: url('/img/sicbo/bg.svg');
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+.m-row-bethsitory {
+  @extend .m-row;
+  @extend .text-btn;
+  height: 56px;
+  color: #291B13;
+}
+
+.m-btn-mybet {
+  @extend .border-right;
+  @extend .half;
+  @extend .flex;
+  @extend .flex-center;
+  @extend .flex-middle;
+  @extend .text-btn;
+  height: 56px;
+  color: #291B13;
+}
+
+.m-btn-allbet {
+  @extend .half;
+  @extend .flex;
+  @extend .flex-center;
+  @extend .flex-middle;
+  @extend .text-btn;
+  height: 56px;
+  color: #291B13;
+}
+
+.activated {
+  color: #FFFFFF;
+}
+
+/* 베팅 히스토리 스타일 */
+.m-box-bet-history {
+  position: relative;
+  height: 160px;
+  top: 0px;
+
+  display: block;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none; // IE에서 스크롤바 감춤
+
+  &::-webkit-scrollbar {
+    display: none !important; // 윈도우 크롬 등
+  }
+
+  padding: 0px;
+  margin: 0px;
+
+  // IE scrollbar
+  scrollbar-face-color: #2F2F4C;
+  scrollbar-track-color: #2F2F4C;
+  scrollbar-arrow-color: none;
+  scrollbar-highlight-color: none;
+  scrollbar-3dlight-color: none;
+  scrollbar-shadow-color: none;
+  scrollbar-darkshadow-color: none;
+  scrollbar-width: thin;
+}
+
+.m-box-bet-history-open {
+  display: block;
+  opacity: 0;
+  transition-property: opacity, top, height;
+  transition-duration: 1s, .5s, 0.5s;
+  transition-delay: 0.5s, 0s, 0s;
+  transition-timing-function: ease;
+}
+
+.m-box-bet-history-close {
+  height: 0px;
+  top: -24px;
+  opacity: 0;
+  height: 0px;
+
+  transition-property: opacity, top, height;
+  transition-duration: .5s, 1s, 1s;
+  transition-delay: 0s, 0.3s, 0.3s;
+  transition-timing-function: ease;
+}
+
+#m-history {
+  // & .history-container {
+  //   overflow-y: scroll;
+  //   overflow-x: hidden;
+  //   -ms-overflow-style: none; // IE에서 스크롤바 감춤
+
+  //   &::-webkit-scrollbar {
+  //     display: none !important; // 윈도우 크롬 등
+  //   }
+
+  //   height: 160px;
+  //   padding: 0px;
+  //   margin: 0px;
+
+  //   // IE scrollbar
+  //   scrollbar-face-color: #2F2F4C;
+  //   scrollbar-track-color: #2F2F4C;
+  //   scrollbar-arrow-color: none;
+  //   scrollbar-highlight-color: none;
+  //   scrollbar-3dlight-color: none;
+  //   scrollbar-shadow-color: none;
+  //   scrollbar-darkshadow-color: none;
+  //   scrollbar-width: thin;
+  // }
+
+  & .m-history-row-dark {
+    @extend .flex;
+    height: 48px;
+    background: #291B13;
+  }
+
+  & .m-history-row-light {
+    @extend .flex;
+    height: 48px;
+    background: #3C271B;
+  }
+
+  & .col-card {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 100%;
+    width: 56px;
+    margin-left: 16px;
+  }
+
+  & .card {
+    width: 28px;
+    height: 40px;
+  }
+
+  & .col-name {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 100%;
+    width: 60px;
+    margin-left: 8px;
+    @extend .text-normal;
+    color: white;
+  }
+
+  & .col-allbet-result {
+    // @extend .flex-wfill;
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 100%;
+    width: 50%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+  }
+
+  & .col-odd-even {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 100%;
+    width: 30px;
+    margin-left: 8px;
+    @extend .text-normal;
+    color: white;
+  }
+
+  & .col-prize {
+    @extend .flex-wfill;
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 100%;
+    margin-left: 8px;
+    @extend .text-normal;
+    color: white;
+  }
+
+  & .col-adjudgment {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 100%;
+    width: 30px;
+    margin-left: 8px;
+    margin-right: 16px;
+  }
+
+  & .row {
+    @extend .flex;
+    @extend .flex-middle;
+    height: 20px;
+  }
+
+  & .player {
+    @extend .text-normal;
+    color: #FFF389;
+    margin-left: 20px;
+  }
+}
+
+// 게임정보
+.m-row-game-board {
+  @extend .m-row;
+  @extend .border-bottom;
+  height: 180px;
+}
+
+.m-game-info {
+  display: block;
+  @extend .half;
+}
+
+
+#m-table-max {
+  display: block;
+  height: 60px;
+  background: rgba(186, 166, 113, 0.6);
+  border-radius: 5px;
+  margin: 6px 8px 6px 12px;
+  padding: 4px;
+  text-align: center;
+
+  $m-bet-amount-prgress-height: 14px;
+
+  &.m-table-max-title {
+    @extend .text-normal;
+    color: #291B13;
+  }
+
+  & .m-bet-amount-prgress-bg {
+    background: #3B271B;
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: $m-bet-amount-prgress-height;
+    margin: 18px 12px auto;
+  }
+
+  & .m-bet-amount-progress {
+    background: #FFF389;
+    border-radius: 10px;
+    height: $m-bet-amount-prgress-height;
+  }
+
+  & .m-bet-amount-progress-rate {
+    position: relative;
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    border-radius: 10px;
+    height: $m-bet-amount-prgress-height;
+    top: -$m-bet-amount-prgress-height;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 9px;
+    color: #FFFFFF;
+  }
+}
+
+#m-last-result {
+  height: 86px;
+  background: rgba(186, 166, 113, 0.6);
+  border-radius: 5px;
+  margin: 0px 8px auto 12px;
+  padding: 4px;
+
+  & .card0 {
+    width: 34px;
+    height: 50px;
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+
+  & .card1 {
+    width: 34px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  & .m-last-result-title {
+    @extend .text-normal;
+    color: #291B13;
+    text-align: center;
+  }
+
+  & #last-result-desc {
+    display: block;
+    @extend .half;
+    @extend .text-normal;
+    height: 100%;
+    line-height: 16px;
+    margin: auto;
+
+    & .last-result-name {
+      color: #FFF389;
+      width: 100%;
+      margin: 12px auto 10px;
+    }
+
+    & .last-result-number {
+      color: #FFFFFF;
+      width: 100%;
+      margin: 0px auto auto;
+    }
+  }
+}
+
+// 첫 번째 배팅 행
+.m-row-bet-0 {
+  @extend .flex;
+  @extend .border-bottom;
+  @extend .m-row;
+  height: 234px;
+}
+
+.m-row-bet-0-col-0 {
+  @extend .border-right;
+  @extend .half;
+}
+
+.m-row-bet-0-col-1 {
+  @extend .border-right;
+  @extend .half;
+  
+  .inner {
+    height: 100%;
+    @extend .flex-column;
+    @extend .flex-center;
+    @extend .flex-middle;
+  }
+}
+
+.m-row-bet-0-col-2 {
+  @extend .half;
+}
+
+.m-bet-small {
+  @extend .flex-column;
+  @extend .flex-center;
+  @extend .flex-middle;
+  @extend .border-bottom;
+  height: 120px;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 120px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+}
+
+.m-bet-small-range {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFF389;
+}
+
+.m-bet-odd {
+  @extend .flex-column;
+  @extend .flex-center;
+  @extend .flex-middle;
+  height: 68px;
+  font-weight: 500;
+  font-size: 30px;
+  color: #FFFFFF;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 68px;
+  }
+}
+
+.m-drate-0 {
+  @extend .flex;
+  @extend .flex-column;
+  @extend .flex-center;
+  @extend .flex-middle;
+  @extend .border-top;
+  @extend .dividend-rate;
+  height: 38px;
+}
+
+.m-bet-guang {
+  @extend .flex-column;
+  @extend .flex-center;
+  @extend .flex-middle;
+  height: 192px;
+  font-weight: 500;
+  font-size: 48px;
+  color: #FFFFFF;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 192px;
+  }
+}
+
+// 땡 베팅 행
+.m-row-bet-1 {
+  @extend .flex;
+  @extend .border-bottom;
+  @extend .m-row;
+  height: 72px;
+}
+
+.m-bet-guang-pair-left {
+  @extend .flex-column;
+  @extend .border-right;
+  @extend .half;
+  height: 72px;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 72px;
+  }
+}
+
+.m-bet-guang-pair-right {
+  @extend .flex-column;
+  @extend .half;
+  height: 72px;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 72px;
+  }
+}
+
+.m-guangcard-left {
+  margin-right: 6px;
+  width: 42px;
+  height: 60px;
+}
+
+.m-guangcard-right {
+  margin-left: 6px;
+  width: 42px;
+  height: 60px;
+}
+
+.m-drate-1 {
+  @extend .flex;
+  @extend .flex-center;
+  @extend .flex-middle;
+  @extend .dividend-rate;
+  @extend .border-bottom;
+  line-height: 12px;
+  height: 24px;
+}
+
+// 페어 배팅 행
+.m-bet-pair {
+  @extend .flex-column;
+  @extend .border-bottom;
+  background-image: url('/img/sicbo/bg.svg');
+  background-size: cover;
+  background-repeat: repeat-y;
+  height: 94px;
+  
+  .inner {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .flex-center;
+    @extend .flex-middle;
+    height: 94px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+}
+
+.m-bet-pair-range {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFF389;
+}
+
+// 기타 행
+.m-row-bet {
+  @extend .flex;
+  @extend .border-bottom;
+  @extend .m-row;
+}
+
+.m-bet-etc-top {
+  @extend .flex-column;
+  @extend .border-bottom;
+  height: 72px;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+    height: 72px;
+  }
+}
+
+.m-bet-etc-bottom {
+  @extend .flex-column;
+  height: 72px;
+
+  .inner {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .flex-middle;
+    font-weight: 500;
+    font-size: 30px;
+    color: #FFFFFF;
+    height: 72px;
+  }
+}
+
+.pad {
+  width:50%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  perspective: 1000;
+  -ms-transform: perspective(1000px);
+  -moz-transform: perspective(1000px);
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  float: left;
+  left: 50%;
+  top: -100%;
+  transform: translateX(-50%);
+  visibility: hidden;
+
+  &.cast-to-left {
+    left: 50%;
+    transform: translateX(-110%);
+    top: 51%;
+    visibility: visible;
+  }
+
+  &.cast-to-right {
+    left: 50%;
+    transform: translateX(10%);
+    top: 51%;
+    visibility: visible;
+  }
+}
+
+.fcard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.fcard.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card-face-back {
+  transform: rotateY(180deg);
+}
+
+.col-card {
+  width: 56px;
+  height: 40px;
+}
+
+.history-card{
+  width: 50%;
+  height: 100%;
+}
+
+.tong {
+  @extend .flex;
+  @extend .flex-center;
+  @extend .flex-middle;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%) translateY(-250%) rotate(90deg);
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.0);
+  
+  &.close {
+    transform: none;
+  }
+}

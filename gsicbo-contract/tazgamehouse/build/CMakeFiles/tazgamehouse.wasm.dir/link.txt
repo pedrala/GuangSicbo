@@ -1,0 +1,1 @@
+/usr/bin/eosio-ld  CMakeFiles/tazgamehouse.wasm.dir/tazgamehouse.cpp.o -o tazgamehouse.wasm 

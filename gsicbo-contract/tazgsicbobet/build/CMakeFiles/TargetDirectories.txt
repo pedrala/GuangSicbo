@@ -1,0 +1,3 @@
+/mnt/e/51_git/c004_gsicbo/contract/tazgsicbobet/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/51_git/c004_gsicbo/contract/tazgsicbobet/build/CMakeFiles/tazgsicbobet.wasm.dir
+/mnt/e/51_git/c004_gsicbo/contract/tazgsicbobet/build/CMakeFiles/edit_cache.dir

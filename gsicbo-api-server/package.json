@@ -1,0 +1,44 @@
+{
+  "name": "gsicbo-server",
+  "version": "0.0.1",
+  "description": "REST API & Websocket for Guang Sicbo Game",
+  "main": "dist/app.js",
+  "scripts": {
+    "serve": "env-cmd -e development nodemon --exec babel-node src/app.js",
+    "build": "babel src -d dist",
+    "lint": "eslint ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gsicbo",
+    "server"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "eosjs": "^20.0.0",
+    "express": "^4.17.0",
+    "moment-timezone": "^0.5.26",
+    "mysql": "^2.17.1",
+    "node-fetch": "^2.6.0",
+    "randomatic": "^3.1.1",
+    "rxjs": "^6.5.2",
+    "socket.io": "^2.2.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "env-cmd": "^9.0.1",
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
+  }
+}

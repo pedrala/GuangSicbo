@@ -1,0 +1,27 @@
+.border-bottom {
+  border-bottom: 4px solid $border-color;
+}
+
+.border-top {
+  border-top: 4px solid $border-color;
+}
+
+.border-left {
+  border-left: 4px solid $border-color;
+}
+
+.border-left-padding {
+  border-left: 4px solid transparent;
+}
+
+.border-right {
+  border-right: 4px solid $border-color;
+}
+
+.border-right-padding {
+  border-right: 4px solid $border-color;
+}
+
+.border-all {
+  border: 4px solid $border-color;
+}

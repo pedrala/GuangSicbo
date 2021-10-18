@@ -1,0 +1,209 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "airdrop",
+            "base": "",
+            "fields": [
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "delivery",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "paydividend",
+            "base": "",
+            "fields": [
+                {
+                    "name": "token",
+                    "type": "string"
+                },
+                {
+                    "name": "n",
+                    "type": "int32"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "payout",
+            "base": "",
+            "fields": [
+                {
+                    "name": "game_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "ref",
+                    "type": "string"
+                },
+                {
+                    "name": "bet_token",
+                    "type": "string"
+                },
+                {
+                    "name": "bet_total",
+                    "type": "int32"
+                },
+                {
+                    "name": "prize_total",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "payoutleader",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user1",
+                    "type": "name"
+                },
+                {
+                    "name": "asset1",
+                    "type": "asset"
+                },
+                {
+                    "name": "user2",
+                    "type": "name"
+                },
+                {
+                    "name": "asset2",
+                    "type": "asset"
+                },
+                {
+                    "name": "user3",
+                    "type": "name"
+                },
+                {
+                    "name": "asset3",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "payvipmining",
+            "base": "",
+            "fields": [
+                {
+                    "name": "game_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "type1",
+                    "type": "string"
+                },
+                {
+                    "name": "asset1",
+                    "type": "asset"
+                },
+                {
+                    "name": "type2",
+                    "type": "string"
+                },
+                {
+                    "name": "asset2",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "airdrop",
+            "type": "airdrop",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delivery",
+            "type": "delivery",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "paydividend",
+            "type": "paydividend",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "payout",
+            "type": "payout",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "payoutleader",
+            "type": "payoutleader",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "payvipmining",
+            "type": "payvipmining",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "variants": []
+}

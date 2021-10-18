@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/e/51_git/c004_gsicbo/contract/taztokenbase/logger.hpp
+eosio/print.hpp
+-
+
+/mnt/e/51_git/c004_gsicbo/contract/taztokenbase/taztokenbase.cpp
+taztokenbase.hpp
+/mnt/e/51_git/c004_gsicbo/contract/taztokenbase/taztokenbase.hpp
+logger.hpp
+/mnt/e/51_git/c004_gsicbo/contract/taztokenbase/logger.hpp
+
+/mnt/e/51_git/c004_gsicbo/contract/taztokenbase/taztokenbase.hpp
+eosio/asset.hpp
+-
+eosio/eosio.hpp
+-
+string
+-
+

@@ -1,0 +1,37 @@
+{
+  "name": "eos-block-tracer",
+  "version": "1.0.0",
+  "description": "EOS Block tracer for gsicbo",
+  "main": "app.js",
+  "scripts": {
+    "serve": "env-cmd -e development nodemon --exec babel-node src/app.js",
+    "build": "babel src -d dist",
+    "test": "jest --watchAll",
+    "lint": "eslint ./src"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "better-queue": "3.8.10",
+    "eosjs": "^20.0.0",
+    "moment-timezone": "^0.5.26",
+    "mysql": "^2.17.1",
+    "node-fetch": "^2.6.0",
+    "pm2": "3.5.0",
+    "rxjs": "6.4.0",
+    "winston": "3.2.1",
+    "winston-transport": "4.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.4",
+    "@babel/node": "7.2.2",
+    "@babel/preset-env": "7.3.4",
+    "babel-jest": "24.5.0",
+    "env-cmd": "^9.0.3",
+    "eslint": "5.15.3",
+    "jest": "24.5.0",
+    "nodemon": "1.18.10",
+    "supertest": "4.0.2"
+  }
+}

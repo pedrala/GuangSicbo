@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/e/51_git/c004_gsicbo/contract/taztokenstak/logger.hpp
+eosio/print.hpp
+-
+
+/mnt/e/51_git/c004_gsicbo/contract/taztokenstak/taztokenstak.cpp
+eosio/eosio.hpp
+-
+eosio/system.hpp
+-
+eosio/asset.hpp
+-
+eosio/transaction.hpp
+-
+logger.hpp
+/mnt/e/51_git/c004_gsicbo/contract/taztokenstak/logger.hpp
+

@@ -1,6 +1,7 @@
-# GuangSicbo
+## Desscription
 GuangSicbo Game Project
 
-How to run gsicbo-client folder
-
+## How to run gsicbo-client
+```console
 npm run serve
+```
